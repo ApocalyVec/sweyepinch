@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="SwEYEpinch: gaze-swipe + pinch text entry for Extended Reality (XR). CHI 2026." />
+
+  <meta property="og:title" content="SwEYEpinch (CHI 2026)" />
+  <meta property="og:description" content="SwEYEpinch: gaze-swipe through a virtual keyboard with a pinch gesture for fast, low-effort XR text entry." />
+  <meta property="og:image" content="assets/paper_first_page.png" />
+
+  <title>SwEYEpinch — CHI 2026</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#top">
+        <span class="brand-dot"></span>
+        <span class="brand-text">SwEYEpinch</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+        <a href="#citation">Citation</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="pill">ACM CHI 2026 · Barcelona</div>
+          <h1>SwEYEpinch and Beyond: <span class="nowrap">Exploring Gaze + Pinch</span> for XR Text Entry</h1>
+
+          <p class="authors">
+            Ziheng “Leo” Li* · Xichen He* · Mengyuan “Millie” Wu · Zeyi Tong · Haowen Wei · Benjamin Yang · Steven Feiner
+          </p>
+          <p class="affil">Columbia University</p>
+
+          <p class="lede">
+            A text-entry technique for XR that combines <b>gaze-based swiping</b> (the <i>where</i>)
+            with a continuous <b>pinch gesture</b> (the <i>when</i>), plus low-latency decoding and
+            interaction optimizations for speed and control.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="assets/SwEYEpinch_2026_CHI.pdf">Paper (PDF)</a>
+            <a class="btn" href="https://doi.org/10.1145/3772318.3791820" target="_blank" rel="noreferrer">DOI</a>
+            <a class="btn" href="#" onclick="return false;" title="Replace with your GitHub repo link">Code (link)</a>
+            <a class="btn" href="#" onclick="return false;" title="Replace with your dataset link">Dataset (link)</a>
+            <a class="btn" href="#" onclick="return false;" title="Replace with your video link">Video (link)</a>
+          </div>
+
+          <p class="note">
+            * co-first authors. Replace the placeholder resource links above with your real URLs (GitHub, HuggingFace, YouTube, etc.).
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <figure class="card">
+            <a href="assets/SwEYEpinch_2026_CHI.pdf" class="thumb-link">
+              <img src="assets/paper_first_page.png" alt="SwEYEpinch paper first page preview" loading="eager" />
+            </a>
+            <figcaption>
+              PDF preview (first page). Click to open the paper.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container">
+        <h2>Overview</h2>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <h3>Abstract</h3>
+            <p>
+              Despite steady progress, text entry in Extended Reality (XR) often remains slower and more effortful than typing on a
+              physical keyboard or touchscreen. We explore a simple idea: use gaze to swipe through a virtual keyboard for fast,
+              low-effort “where”, and hold a pinch throughout the swipe for the “when”. We extend and validate the approach through
+              a series of user studies. A low-latency decoder with spatiotemporal Dynamic Time Warping and fixation filtering outperforms
+              selecting individual keys sequentially, either by finger tapping each or gazing at each while pinching. We then add
+              mid-swipe prediction and in-gesture cancellation, improving words per minute (WPM) without hurting accuracy. The resulting
+              approach is faster and more preferred than prior gaze-swipe approaches, finger tapping with prediction, or hand swiping with
+              the same additions. A seven-day, 30-session longitudinal study demonstrates sustained learning, with peak performance reaching
+              64.7 WPM.
+            </p>
+          </div>
+
+          <div class="card pad">
+            <h3>What’s new</h3>
+            <ul class="bullets">
+              <li><b>Gaze-swipe + pinch</b> interaction design for XR text entry (where + when).</li>
+              <li><b>Low-latency decoding</b> with DTW + fixation filtering for real-time candidate updates.</li>
+              <li><b>Interaction optimizations</b>: mid-swipe prediction and in-gesture cancellation.</li>
+              <li><b>Validation</b> across controlled studies and a 7-day longitudinal learning study.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section alt">
+      <div class="container">
+        <h2>Key results (high level)</h2>
+
+        <div class="grid-3">
+          <div class="card pad">
+            <h3>Speed</h3>
+            <p>Demonstrates competitive WPM, with longitudinal peak performance reported at <b>64.7 WPM</b>.</p>
+          </div>
+          <div class="card pad">
+            <h3>Accuracy</h3>
+            <p>Optimizations increase WPM <b>without hurting accuracy</b>, and improve usability in practice.</p>
+          </div>
+          <div class="card pad">
+            <h3>Preference</h3>
+            <p>Users prefer SwEYEpinch over baselines such as sequential key selection and alternative swipe variants.</p>
+          </div>
+        </div>
+
+        <p class="subnote">
+          Want this section to show real figures? Drop a few exported plots (PNG/SVG) into <code>assets/</code> and update the HTML.
+        </p>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <h2>Resources</h2>
+
+        <div class="card pad">
+          <div class="resource-grid">
+            <div>
+              <h3>Paper</h3>
+              <p>
+                <a href="assets/SwEYEpinch_2026_CHI.pdf">SwEYEpinch_2026_CHI.pdf</a>
+                <span class="muted">· ACM CHI 2026</span>
+              </p>
+            </div>
+
+            <div>
+              <h3>Code</h3>
+              <p class="muted">Add your GitHub repo link (e.g., Gaze2Word / SwEYEpinch decoder) and update the buttons above.</p>
+            </div>
+
+            <div>
+              <h3>Dataset</h3>
+              <p class="muted">Add your dataset link (e.g., HuggingFace Datasets) and update the buttons above.</p>
+            </div>
+
+            <div>
+              <h3>Video</h3>
+              <p class="muted">Add your YouTube/Vimeo link and optionally a thumbnail.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="citation" class="section alt">
+      <div class="container">
+        <h2>Citation</h2>
+
+        <div class="grid-2">
+          <div class="card pad">
+            <h3>BibTeX</h3>
+            <pre class="code" id="bibtex">@inproceedings{li2026sweyepinch,
+  title     = {SwEYEpinch and Beyond: Exploring Gaze + Pinch for XR Text Entry},
+  author    = {Li, Ziheng and He, Xichen and Wu, Mengyuan and Tong, Zeyi and Wei, Haowen and Yang, Benjamin and Feiner, Steven},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year      = {2026},
+  doi       = {10.1145/3772318.3791820}
+}</pre>
+            <button class="btn small" data-copy="#bibtex">Copy</button>
+          </div>
+
+          <div class="card pad">
+            <h3>Links</h3>
+            <ul class="bullets">
+              <li><a href="https://doi.org/10.1145/3772318.3791820" target="_blank" rel="noreferrer">DOI: 10.1145/3772318.3791820</a></li>
+              <li><a href="assets/SwEYEpinch_2026_CHI.pdf">Local PDF</a></li>
+              <li class="muted">Add: project repo · dataset · demo video · press kit</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container footer-inner">
+            <span class="muted">© 2026 SwEYEpinch authors.</span>
+            <span class="muted">Built for GitHub Pages.</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
