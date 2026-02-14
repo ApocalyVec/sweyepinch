@@ -41,40 +41,81 @@
       <div class="container hero-grid">
         <div class="hero-left">
           <div class="pill">ACM CHI 2026 · Barcelona</div>
-          <h1>SwEYEpinch and Beyond: <span class="nowrap">Exploring Gaze + Pinch</span> for XR Text Entry</h1>
+          <h1>SwEYEpinch: Intuitive and Efficient Text Entry for XR</h1>
 
           <p class="authors">
-            Ziheng “Leo” Li* · Xichen He* · Mengyuan “Millie” Wu · Zeyi Tong · Haowen Wei · Benjamin Yang · Steven Feiner
+            <a href="https://apocalyvec.github.io/" target="_blank" rel="noreferrer">Ziheng “Leo” Li*</a>
+            · <a href="https://www.linkedin.com/in/xichen-he/" target="_blank" rel="noreferrer">Xichen He*</a>
+            · <a href="https://www.linkedin.com/in/millie-wu/" target="_blank" rel="noreferrer">Mengyuan “Millie” Wu</a>
+            · <a href="https://www.linkedin.com/in/zeyitong/" target="_blank" rel="noreferrer">Zeyi Tong</a>
+            · <a href="https://www.linkedin.com/in/haowen-wei-7104bb1b1/" target="_blank" rel="noreferrer">Haowen Wei</a>
+            · <a href="https://www.linkedin.com/in/bentyang/" target="_blank" rel="noreferrer">Benjamin Yang</a>
+            · <a href="https://www.cs.columbia.edu/~feiner/" target="_blank" rel="noreferrer">Steven Feiner</a>
+            · <a href="https://www.bme.columbia.edu/paul-sajda" target="_blank" rel="noreferrer">Paul Sajda</a>
           </p>
+
           <p class="affil">Columbia University</p>
 
           <p class="lede">
             A text-entry technique for XR that combines <b>gaze-based swiping</b> (the <i>where</i>)
             with a continuous <b>pinch gesture</b> (the <i>when</i>), plus low-latency decoding and
-            interaction optimizations for speed and control.
+            interaction optimizations for fluid interaction--Peaking at 64.7 WPM in a 7-day longitudinal study.
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="assets/SwEYEpinch_2026_CHI.pdf">Paper (PDF)</a>
-            <a class="btn" href="https://doi.org/10.1145/3772318.3791820" target="_blank" rel="noreferrer">DOI</a>
-            <a class="btn" href="#" onclick="return false;" title="Replace with your GitHub repo link">Code (link)</a>
-            <a class="btn" href="#" onclick="return false;" title="Replace with your dataset link">Dataset (link)</a>
-            <a class="btn" href="#" onclick="return false;" title="Replace with your video link">Video (link)</a>
+            <a class="btn pill primary" href="assets/SwEYEpinch_2026_CHI.pdf">
+    <span class="pill-icon">
+      <img src="https://cdn.simpleicons.org/pdf/ffffff" alt="" />
+    </span>
+              <span class="pill-text">Paper</span>
+            </a>
+
+            <a class="btn pill" href="https://doi.org/10.1145/3772318.3791820" target="_blank" rel="noreferrer">
+    <span class="pill-icon">
+      <img src="https://cdn.simpleicons.org/doi/ffffff" alt="" />
+    </span>
+              <span class="pill-text">10.1145/3772318.3791820</span>
+            </a>
+
+            <a class="btn pill" href="https://pypi.org/project/gaze2word/" target="_blank" rel="noreferrer">
+    <span class="pill-icon">
+      <img src="https://cdn.simpleicons.org/pypi/ffffff" alt="" />
+    </span>
+              <span class="pill-text">gaze2word</span>
+            </a>
+
+            <a class="btn pill" href="https://huggingface.co/datasets/SwEYEpinch/SwEYEpinch" target="_blank" rel="noreferrer">
+    <span class="pill-icon">
+      <img src="https://cdn.simpleicons.org/huggingface/ffffff" alt="" />
+    </span>
+              <span class="pill-text">Swipe Dataset</span>
+            </a>
+
+            <a class="btn pill disabled" href="#" onclick="return false;" aria-disabled="true" title="Unity demo link coming soon">
+    <span class="pill-icon">
+      <img src="https://cdn.simpleicons.org/unity/ffffff" alt="" />
+    </span>
+              <span class="pill-text">Unity Demo</span>
+              <span class="pill-tag">Coming soon</span>
+            </a>
           </div>
 
+
+
+
           <p class="note">
-            * co-first authors. Replace the placeholder resource links above with your real URLs (GitHub, HuggingFace, YouTube, etc.).
+            * co-first authors.
           </p>
         </div>
 
         <div class="hero-right">
           <figure class="card">
-            <a href="assets/SwEYEpinch_2026_CHI.pdf" class="thumb-link">
-              <img src="assets/paper_first_page.png" alt="SwEYEpinch paper first page preview" loading="eager" />
+            <a href="assets/sweyepinch.gif" class="thumb-link">
+              <img src="assets/sweyepinch.gif" alt="SwEYEpinch demo animation" loading="eager" />
             </a>
-            <figcaption>
-              PDF preview (first page). Click to open the paper.
-            </figcaption>
+<!--            <figcaption>-->
+<!--              Demo preview (GIF). Click to open.-->
+<!--            </figcaption>-->
           </figure>
         </div>
       </div>
@@ -85,23 +126,50 @@
         <h2>Overview</h2>
 
         <div class="grid-2">
-          <div class="card pad">
-            <h3>Abstract</h3>
-            <p>
-              Despite steady progress, text entry in Extended Reality (XR) often remains slower and more effortful than typing on a
-              physical keyboard or touchscreen. We explore a simple idea: use gaze to swipe through a virtual keyboard for fast,
-              low-effort “where”, and hold a pinch throughout the swipe for the “when”. We extend and validate the approach through
-              a series of user studies. A low-latency decoder with spatiotemporal Dynamic Time Warping and fixation filtering outperforms
-              selecting individual keys sequentially, either by finger tapping each or gazing at each while pinching. We then add
-              mid-swipe prediction and in-gesture cancellation, improving words per minute (WPM) without hurting accuracy. The resulting
-              approach is faster and more preferred than prior gaze-swipe approaches, finger tapping with prediction, or hand swiping with
-              the same additions. A seven-day, 30-session longitudinal study demonstrates sustained learning, with peak performance reaching
-              64.7 WPM.
-            </p>
+          <div class="card pad gallery" aria-label="Figure gallery">
+
+            <div class="gallery-viewport" tabindex="0">
+              <div class="gallery-track">
+
+                <!-- Slide 0 -->
+                <figure class="gslide">
+                  <img src="assets/teaser_web.png" alt="Typing in XR with SwEYEpinch" loading="lazy" />
+                  <figcaption class="muted">Typing in XR with SwEYEpinch</figcaption>
+                </figure>
+
+                <!-- Slide 1 -->
+                <figure class="gslide">
+                  <img src="assets/us3_wpm.svg" alt="SwEYEpinch outperform existing XR text input methods." loading="lazy" />
+                  <figcaption class="muted">SwEYEpinch outperform existing XR text input methods.</figcaption>
+                </figure>
+
+                <!-- Slide 2 -->
+                <figure class="gslide">
+                  <img src="assets/us3_s3_preference.png" alt="SwEYEpinch sits on the pareto frontier in both user preference and typing speed." loading="lazy" />
+                  <figcaption class="muted">SwEYEpinch sits on the pareto frontier in both user preference and typing speed.</figcaption>
+                </figure>
+
+                <!-- Slide 3 -->
+                <figure class="gslide">
+                  <img src="assets/us4_wpm.png" alt="Users continuously get faster with week-long practice." loading="lazy" />
+                  <figcaption class="muted">Users continuously get faster with week-long practice.</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="gallery-head">
+              <div class="gallery-controls">
+                <button class="gbtn" type="button" data-prev aria-label="Previous figure">‹</button>
+                <button class="gbtn" type="button" data-next aria-label="Next figure">›</button>
+              </div>
+            </div>
+
+            <div class="gallery-dots" aria-label="Gallery navigation"></div>
           </div>
 
+
           <div class="card pad">
-            <h3>What’s new</h3>
+            <h3>Highlights</h3>
             <ul class="bullets">
               <li><b>Gaze-swipe + pinch</b> interaction design for XR text entry (where + when).</li>
               <li><b>Low-latency decoding</b> with DTW + fixation filtering for real-time candidate updates.</li>
@@ -115,7 +183,7 @@
 
     <section id="results" class="section alt">
       <div class="container">
-        <h2>Key results (high level)</h2>
+        <h2>Key results</h2>
 
         <div class="grid-3">
           <div class="card pad">
@@ -132,9 +200,6 @@
           </div>
         </div>
 
-        <p class="subnote">
-          Want this section to show real figures? Drop a few exported plots (PNG/SVG) into <code>assets/</code> and update the HTML.
-        </p>
       </div>
     </section>
 
