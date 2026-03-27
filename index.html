@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SwEYEpinch: gaze-swipe + pinch text entry for Extended Reality (XR). CHI 2026." />
+  <meta name="description" content="SwEYEpinch: the fastest text input tested in XR — gaze-swipe + pinch, peaking at 64.7 WPM. CHI 2026." />
 
-  <meta property="og:title" content="SwEYEpinch (CHI 2026)" />
-  <meta property="og:description" content="SwEYEpinch: gaze-swipe through a virtual keyboard with a pinch gesture for fast, low-effort XR text entry." />
+  <meta property="og:title" content="SwEYEpinch — Fastest XR Text Input (CHI 2026)" />
+  <meta property="og:description" content="SwEYEpinch combines gaze-swipe with a pinch delimiter for record-speed XR text entry — 64.7 WPM peak, outperforming all tested methods. CHI 2026." />
   <meta property="og:image" content="assets/paper_first_page.png" />
 
   <title>SwEYEpinch — CHI 2026</title>
@@ -25,6 +25,7 @@
 
       <nav class="nav">
         <a href="#overview">Overview</a>
+        <a href="#video">Video</a>
         <a href="#results">Results</a>
         <a href="#resources">Resources</a>
         <a href="#citation">Citation</a>
@@ -41,7 +42,7 @@
       <div class="container hero-grid">
         <div class="hero-left">
           <div class="pill">ACM CHI 2026 · Barcelona</div>
-          <h1>SwEYEpinch: Intuitive and Efficient Text Entry for XR</h1>
+          <h1>SwEYEpinch: The Fastest Text Input Tested in XR</h1>
 
           <p class="authors">
             <a href="https://apocalyvec.github.io/" target="_blank" rel="noreferrer">Ziheng “Leo” Li*</a>
@@ -57,9 +58,7 @@
           <p class="affil">Columbia University</p>
 
           <p class="lede">
-            A text-entry technique for XR that combines <b>gaze-based swiping</b> (the <i>where</i>)
-            with a continuous <b>pinch gesture</b> (the <i>when</i>), plus low-latency decoding and
-            interaction optimizations for fluid interaction--Peaking at 64.7 WPM in a 7-day longitudinal study.
+            SwEYEpinch pairs <b>gaze-based swiping</b> (the <i>where</i>) with a <b>pinch gesture</b> (the <i>when</i>) for fluid, eyes-first text entry in XR—outperforming Finger-Tap, Hand-Swipe, Gaze&amp;Pinch, and all tested gaze-only methods. Across four user studies including a 7-day longitudinal study, it peaks at <b>64.7 WPM</b> — matching everyday keyboard speeds.
           </p>
 
           <div class="cta-row">
@@ -181,14 +180,34 @@
       </div>
     </section>
 
-    <section id="results" class="section alt">
+    <section id="video" class="section alt">
+      <div class="container">
+        <h2>Video</h2>
+        <!-- TODO: replace YOUTUBE_VIDEO_ID below with your YouTube video ID, then remove the placeholder card -->
+        <!--
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+            title="SwEYEpinch — Fastest XR Text Input (CHI 2026)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        -->
+        <div class="card pad video-placeholder">
+          <p class="muted">Video coming soon — uploading to YouTube.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section">
       <div class="container">
         <h2>Key results</h2>
 
         <div class="grid-3">
           <div class="card pad">
             <h3>Speed</h3>
-            <p>Demonstrates competitive WPM, with longitudinal peak performance reported at <b>64.7 WPM</b>.</p>
+            <p>Peak <b>64.7 WPM</b> in a 7-day longitudinal study — matching everyday keyboard speeds, and faster than all tested XR methods (Finger-Tap, Hand-Swipe, Gaze&amp;Pinch, SkiMR, GlanceWriter).</p>
           </div>
           <div class="card pad">
             <h3>Accuracy</h3>
@@ -203,7 +222,7 @@
       </div>
     </section>
 
-    <section id="resources" class="section">
+    <section id="resources" class="section alt">
       <div class="container">
         <h2>Resources</h2>
 
@@ -218,25 +237,31 @@
             </div>
 
             <div>
-              <h3>Code</h3>
-              <p class="muted">Add your GitHub repo link (e.g., Gaze2Word / SwEYEpinch decoder) and update the buttons above.</p>
+              <h3>Decoder (Gaze2Word)</h3>
+              <p>
+                <a href="https://pypi.org/project/gaze2word/" target="_blank" rel="noreferrer">gaze2word on PyPI</a>
+                <span class="muted"> · Open-source spatiotemporal DTW decoder</span>
+              </p>
             </div>
 
             <div>
               <h3>Dataset</h3>
-              <p class="muted">Add your dataset link (e.g., HuggingFace Datasets) and update the buttons above.</p>
+              <p>
+                <a href="https://huggingface.co/datasets/SwEYEpinch/SwEYEpinch" target="_blank" rel="noreferrer">SwEYEpinch on HuggingFace</a>
+                <span class="muted"> · Gaze–swipe traces from all user studies</span>
+              </p>
             </div>
 
             <div>
-              <h3>Video</h3>
-              <p class="muted">Add your YouTube/Vimeo link and optionally a thumbnail.</p>
+              <h3>Unity Demo</h3>
+              <p class="muted">Coming soon — full Unity implementation for Meta Quest.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="citation" class="section alt">
+    <section id="citation" class="section">
       <div class="container">
         <h2>Citation</h2>
 
@@ -244,8 +269,8 @@
           <div class="card pad">
             <h3>BibTeX</h3>
             <pre class="code" id="bibtex">@inproceedings{li2026sweyepinch,
-  title     = {SwEYEpinch and Beyond: Exploring Gaze + Pinch for XR Text Entry},
-  author    = {Li, Ziheng and He, Xichen and Wu, Mengyuan and Tong, Zeyi and Wei, Haowen and Yang, Benjamin and Feiner, Steven},
+  title     = {SwEYEpinch: Exploring Intuitive, Efficient Text Entry for Extended Reality via Eye and Hand Tracking},
+  author    = {Li, Ziheng and He, Xichen and Wu, Mengyuan and Tong, Zeyi and Wei, Haowen and Yang, Benjamin and Feiner, Steven and Sajda, Paul},
   booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
   year      = {2026},
   doi       = {10.1145/3772318.3791820}
@@ -258,7 +283,8 @@
             <ul class="bullets">
               <li><a href="https://doi.org/10.1145/3772318.3791820" target="_blank" rel="noreferrer">DOI: 10.1145/3772318.3791820</a></li>
               <li><a href="assets/SwEYEpinch_2026_CHI.pdf">Local PDF</a></li>
-              <li class="muted">Add: project repo · dataset · demo video · press kit</li>
+              <li><a href="https://pypi.org/project/gaze2word/" target="_blank" rel="noreferrer">Gaze2Word decoder (PyPI)</a></li>
+              <li><a href="https://huggingface.co/datasets/SwEYEpinch/SwEYEpinch" target="_blank" rel="noreferrer">Swipe trace dataset (HuggingFace)</a></li>
             </ul>
           </div>
         </div>

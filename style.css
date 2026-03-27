@@ -576,3 +576,20 @@ pre.code{
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* ── Responsive YouTube embed ── */
+.video-wrap{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: var(--r);
+  overflow: hidden;
+  background: #000;
+}
+.video-wrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
